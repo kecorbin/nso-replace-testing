@@ -1,0 +1,39 @@
+- name: Check Synchronization of Devices
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  module_defaults:
+    nso_action:
+      url: http://localhost:8080/jsonrpc
+      username: admin
+      password: admin
+
+    nso_config:
+      url: http://localhost:8080/jsonrpc
+      username: admin
+      password: admin
+
+  tasks:
+    - name: sync-from
+      nso_action:
+        path: /ncs:devices/sync-from
+        input: {}
+
+    - name: configure device
+      nso_config:
+        data:
+          tailf-ncs:devices:
+            device:
+            - name: router0
+              tailf-ncs:config:
+                tailf-ned-cisco-ios:interface:
+                  __state: replace
+                  FastEthernet:
+                  - name: 1/0
+                  Loopback:
+                  - name: '0'
+
+    - name: sync-to
+      nso_action:
+        path: /ncs:devices/sync-to
+        input: {}
