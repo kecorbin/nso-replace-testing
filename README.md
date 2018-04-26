@@ -10,11 +10,12 @@ Repo to test various scenarios related to the addition of
 
 ## Setup
 
+```
 ncs-netsim create-network cisco-ios 1 router
 ncs-netsim start
 ncs-setup --dest .
 ncs
-
+```
 
 
 # Issue #1 - Interfaces
