@@ -1,6 +1,7 @@
 # nso-replace-testing
 
-Repo to test various scenarios related to the addition of
+Repo to test various scenarios related to the addition of the `__state: replace`
+option in nso_config ansible module
 
 ## Background
 
