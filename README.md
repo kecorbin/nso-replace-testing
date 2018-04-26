@@ -5,8 +5,8 @@ option in nso_config ansible module
 
 ## Background
 
-[Ansible Feature Request](https://github.com/ansible/ansible/issues/39278)
-[Development Branch](https://github.com/cnasten/ansible/tree/cnasten/devel)
+* [Ansible Feature Request](https://github.com/ansible/ansible/issues/39278)
+* [Development Branch](https://github.com/cnasten/ansible/tree/cnasten/devel)
 
 
 ## Setup
